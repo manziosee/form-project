@@ -1,17 +1,20 @@
 .form-section {
   margin: 20px;
-  background-color: gray;
-  width: auto;
-  height: auto;
   border-radius: 8px;
   padding: 20px;
 }
-
+.formz-section{
+  background-color: rgba(223, 233, 235, 0.795);
+  width: 31rem;
+  height: 3rem;
+  border-radius: 2px;
+}
 .section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  font-size:large;
 }
 
 .toggle-button {

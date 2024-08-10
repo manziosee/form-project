@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './BookingDetails.css';
+import dropdown from '../assets/dropdown.svg'
 
 function BookingDetails() {
   const [details, setDetails] = useState({
@@ -19,10 +20,13 @@ function BookingDetails() {
 
   return (
     <div className="form-section">
+      <div className='formz-section'>
       <h2 onClick={toggleCollapse} className="section-header">
         Booking Details Section
-        <button className={`toggle-button ${isCollapsed ? '' : 'rotate'}`}>▼</button>
+        <span className="toggle-button"><img  className ="dropdown" src={dropdown} alt="" /></span>
       </h2>
+      </div>
+
       {!isCollapsed && (
         <div className="form-content">
           <div className="form-group">

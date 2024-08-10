@@ -38,7 +38,6 @@
 }
 .next-button {
   display: block;
-  width: calc(100% - 40px);
   margin: 20px;
   padding: 10px;
   background-color: #007BFF;
@@ -47,6 +46,8 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  margin-left: 28rem;
+  width:5rem;
 }
 
 .next-button:hover {
