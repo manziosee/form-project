@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import logo from './assets/logo.png';
+import background from './assets/background.jpg';
+import PersonalInformation from './components/PersonalInformation';
+import BookingDetails from './components/BookingDetails';
 
 function App() {
+  const [step, setStep] = useState(1);
+
+  const handleNext = () => {
+    setStep(step + 1);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="background" style={{ backgroundImage: `url(${background})` }}></div>
+      <div className="overlay">
+        <img src={logo} alt="Logo" className="logo" />
+        <div className="form-container">
+          <PersonalInformation />
+          <BookingDetails />
+          <button onClick={handleNext} className="next-button">Next</button>
+        </div>
+      </div>
     </div>
   );
 }
