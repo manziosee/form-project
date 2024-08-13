@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import dropdown from '../assets/dropdown.svg'
+import dropdown from '../assets/dropdown.svg';
 import './PersonalInformation.css';
 
 function PersonalInformation() {
@@ -22,12 +22,14 @@ function PersonalInformation() {
 
   return (
     <div className="form-section">
-    <div className="formz-section">
-    <h2 onClick={toggleCollapse} className="section-header">
-        Personal Information
-        <span className="toggle-button"><img  className ="dropdown" src={dropdown} alt="" /></span>
-      </h2>
-    </div>
+      <div className="formz-section">
+        <h2 onClick={toggleCollapse} className="section-header">
+          Personal Information
+          <span className="toggle-button">
+            <img className="dropdown" src={dropdown} alt="Toggle" />
+          </span>
+        </h2>
+      </div>
       {!isCollapsed && (
         <div className="form-content">
           <div className="form-group">
