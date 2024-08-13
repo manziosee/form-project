@@ -3,18 +3,22 @@
   border-radius: 8px;
   padding: 20px;
 }
-.formz-section{
+
+.formz-section {
   background-color: rgba(223, 233, 235, 0.795);
-  width: 31rem;
-  height: 3rem;
-  border-radius: 2px;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  font-size:large;
+  font-size: large;
 }
 
 .toggle-button {
