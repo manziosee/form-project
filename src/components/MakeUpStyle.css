@@ -3,7 +3,6 @@
   border-radius: 8px;
   max-width: 600px;
   margin: 0 auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .section-header {
@@ -46,19 +45,18 @@
 }
 
 .radio-option {
-  margin-bottom: 10px;
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
-.radio-option input {
+.radio-option input[type="radio"] {
   margin-right: 10px;
 }
 
 .radio-option label {
   font-size: 1rem;
   color: #333;
-  line-height: 1.5;
 }
 
 input[type="radio"]:checked + label {

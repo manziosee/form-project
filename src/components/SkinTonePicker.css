@@ -1,10 +1,10 @@
 .skin-tone-picker {
   text-align: center;
-  margin: 20px;
+  margin: 17px;
   padding: 20px;
   border-radius: 8px;
+  width: 31rem;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .section-header {
@@ -29,9 +29,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-
+.toneInput{
+  margin-left: -20rem;
+}
 .tones-grid img {
   width: 100%;
   height: 300px;
@@ -39,6 +41,8 @@
   cursor: pointer;
   border-radius: 8px;
   transition: transform 0.2s ease-in-out;
+  margin-top: 4rem;
+  justify-content: center;
 }
 
 .tones-grid img.selected {

@@ -44,10 +44,10 @@ function MakeUpStyle() {
               ))}
             </div>
           </div>
-          <div className="button-group">
+          {/* <div className="button-group">
             <button type="button" className="btn back-btn">Back</button>
             <button type="button" className="btn next-btn">Next</button>
-          </div>
+          </div> */}
         </form>
       )}
     </div>
