@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './DuskdelightSettingPowder.css';
 
-function DuskdelightSettingPowder({ onNext, onBack }) {
+function DuskdelightSettingPowder() {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -12,7 +12,6 @@ function DuskdelightSettingPowder({ onNext, onBack }) {
     { id: 4, src: require('../assets/Dusk delight Setting Powder 4.jpg'), alt: 'Skin Tone 4' },
     { id: 5, src: require('../assets/Dusk delight Setting Powder 5.jpg'), alt: 'Skin Tone 5' },
     { id: 6, src: require('../assets/Dusk delight Setting Powder 6.jpg'), alt: 'Skin Tone 6' },
-    
   ];
 
   const handleSelect = (id) => {
@@ -24,11 +23,13 @@ function DuskdelightSettingPowder({ onNext, onBack }) {
   };
 
   return (
-    <div className="duskdelight">
-      <h2 onClick={toggleCollapse} className="section-header">
-        Dusk Delight Setting Powder
-        <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
-      </h2>
+    <div className="form-section">
+      <div className="formz-section">
+        <h2 onClick={toggleCollapse} className="section-header">
+          Dusk Delight Setting Powder
+          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
+        </h2>
+      </div>
       {!isCollapsed && (
         <>
           <div className="tones-grid">

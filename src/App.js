@@ -17,12 +17,17 @@ import EyebrowGel from './components/EyebrowGel';
 import EyeShadowMascar from './components/EyeShadowMascar';
 import GelLiner from './components/GelLiner';
 import FeedbackPage from './components/FeedbackPage';
+import LipGloss from './components/LipGloss';
+import LipLiner from './components/LipLiner';
+import Lipstick from './components/Lipstick';
+import LiquidLipstick from './components/LiquidLipstick';
+import SilhouetteLiner from './components/SilhouetteLiner';
 
 function App() {
   const [step, setStep] = useState(1);
 
   const handleNext = () => {
-    if (step < 6) {
+    if (step < 7) {
       setStep(step + 1);
     }
   };
@@ -65,7 +70,16 @@ function App() {
               <GelLiner />
             </>
           )}
-          {step === 6 && <FeedbackPage onBack={handleBack} />}
+          {step === 6 && (
+            <>
+              <Lipstick />
+              <LiquidLipstick />
+              <LipGloss />
+              <LipLiner />
+              <SilhouetteLiner />
+            </>
+          )}
+          {step === 7 && <FeedbackPage onBack={handleBack} />}
 
           <div className="navigation-buttons">
             {step > 1 && (
@@ -73,7 +87,7 @@ function App() {
                 Back
               </button>
             )}
-            {step < 6 && (
+            {step < 7 && (
               <button onClick={handleNext} className="next-button">
                 Next
               </button>

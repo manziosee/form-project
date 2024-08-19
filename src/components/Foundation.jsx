@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Foundation.css';
 
-function Foundation({ onNext, onBack }) {
+function Foundation() {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -21,14 +21,13 @@ function Foundation({ onNext, onBack }) {
   };
 
   return (
-    <div className="foundation">
-      <div className='form-group'>
-      <h2 onClick={toggleCollapse} className="section-header">
-        Foundation
-        <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
-      </h2>
+    <div className="form-section">
+      <div className="formz-section">
+        <h2 onClick={toggleCollapse} className="section-header">
+          Foundation
+          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
+        </h2>
       </div>
-
       {!isCollapsed && (
         <>
           <div className="tones-grid">

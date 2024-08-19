@@ -26,12 +26,12 @@ function SkinTonePicker({ onNext, onBack }) {
   };
 
   return (
-    <div className="skin-tone-picker">
-      <div className='formz-section'>
-      <h2 onClick={toggleCollapse} className="section-header">
-        Pick your skin tone
-        <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
-      </h2>
+    <div className="form-section">
+      <div className="formz-section">
+        <h2 onClick={toggleCollapse} className="section-header">
+          Pick your skin tone
+          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
+        </h2>
       </div>
       {!isCollapsed && (
         <>
@@ -47,7 +47,7 @@ function SkinTonePicker({ onNext, onBack }) {
             ))}
           </div>
           <div className="upload-section">
-            <label className='toneInput'>
+            <label>
               <input 
                 type="radio" 
                 value="upload" 
