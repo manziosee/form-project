@@ -22,7 +22,7 @@ function PersonalInformation() {
 
   return (
     <div className="form-section">
-      <div className="formz-section">
+      <div className='formz-section'>
         <h2 onClick={toggleCollapse} className="section-header">
           Personal Information
           <span className="toggle-button">

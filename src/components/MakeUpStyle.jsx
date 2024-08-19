@@ -15,14 +15,14 @@ function MakeUpStyle() {
   };
 
   return (
-    <div className={`makeup-style-section ${isCollapsed ? 'collapsed' : ''}`}>
+    <div className="form-section">
       <div className="formz-section">
-        <div onClick={toggleCollapse} className="section-header">
+        <h2 onClick={toggleCollapse} className="section-header">
           Makeup Style
           <span className="toggle-button">
             <img className="dropdown" src={dropdown} alt="Toggle" />
           </span>
-        </div>
+        </h2>
       </div>
       {!isCollapsed && (
         <form className="form-content">
@@ -43,10 +43,6 @@ function MakeUpStyle() {
                 </div>
               ))}
             </div>
-          </div>
-          <div className="button-group">
-            <button type="button" className="btn back-btn">Back</button>
-            <button type="button" className="btn next-btn">Next</button>
           </div>
         </form>
       )}

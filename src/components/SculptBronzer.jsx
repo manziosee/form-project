@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SculptBronzer.css';
 
-function SculptBronzer({ onNext, onBack }) {
+function SculptBronzer() {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -19,11 +19,13 @@ function SculptBronzer({ onNext, onBack }) {
   };
 
   return (
-    <div className="sculptbronzer">
-      <h2 onClick={toggleCollapse} className="section-header">
-        Sculpt Bronzer
-        <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
-      </h2>
+    <div className="form-section">
+      <div className="formz-section">
+        <h2 onClick={toggleCollapse} className="section-header">
+          Sculpt Bronzer
+          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
+        </h2>
+      </div>
       {!isCollapsed && (
         <>
           <div className="tones-grid">

@@ -1,14 +1,24 @@
-.makeup-style-section {
+.form-section {
   padding: 20px;
   border-radius: 8px;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 20px auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.formz-section {
+  background-color: rgba(223, 233, 235, 0.795);
+  padding: 1rem;
+  font-family: Cambria;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .section-header {
   font-size: 1.5rem;
-  margin-bottom: 20px;
   text-align: center;
   color: #333;
   cursor: pointer;
@@ -66,30 +76,12 @@ input[type="radio"]:checked + label {
   color: #007bff;
 }
 
-.makeup-style-section.collapsed .form-content {
-  display: none;
-}
+@media (max-width: 600px) {
+  .form-section {
+    padding: 10px;
+  }
 
-.button-group {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.btn {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-}
-
-.back-btn {
-  background-color: #6c757d;
-  color: white;
-}
-
-.next-btn {
-  background-color: #007bff;
-  color: white;
+  .section-header {
+    font-size: 1.2rem;
+  }
 }

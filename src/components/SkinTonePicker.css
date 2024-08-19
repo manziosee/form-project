@@ -1,10 +1,20 @@
-.skin-tone-picker {
+.form-section {
   text-align: center;
   margin: 20px;
   padding: 20px;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formz-section {
+  background-color: rgba(223, 233, 235, 0.795);
+  padding: 1rem;
+  font-family: Cambria;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .section-header {
@@ -68,26 +78,16 @@
   margin-bottom: 10px;
 }
 
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
+@media (max-width: 600px) {
+  .form-section {
+    padding: 10px;
+  }
 
-.back-button, .next-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 4px;
-}
-
-.back-button {
-  background-color: #ddd;
-  color: #333;
-}
-
-.next-button {
-  background-color: #007BFF;
-  color: #fff;
+  .tones-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .upload-section {
+    margin: 10px 0;
+  }
 }
