@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Blusher.css';
+import './EyebrowGel.css';
 
-function EyebrowGel({ onNext, onBack }) {
+function EyebrowGel() {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -19,25 +19,25 @@ function EyebrowGel({ onNext, onBack }) {
   };
 
   return (
-    <div className="eyebrowgel">
-      <h2 onClick={toggleCollapse} className="section-header">
-      Eyebrow Gel
-        <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
-      </h2>
+    <div className="form-section">
+      <div className="formz-section">
+        <h2 onClick={toggleCollapse} className="section-header">
+          Eyebrow Gel
+          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
+        </h2>
+      </div>
       {!isCollapsed && (
-        <>
-          <div className="tones-grid">
-            {tones.map(tone => (
-              <img
-                key={tone.id}
-                src={tone.src}
-                alt={tone.alt}
-                className={selectedTone === tone.id ? 'selected' : ''}
-                onClick={() => handleSelect(tone.id)}
-              />
-            ))}
-          </div>
-        </>
+        <div className="tones-grid">
+          {tones.map((tone) => (
+            <img
+              key={tone.id}
+              src={tone.src}
+              alt={tone.alt}
+              className={selectedTone === tone.id ? 'selected' : ''}
+              onClick={() => handleSelect(tone.id)}
+            />
+          ))}
+        </div>
       )}
     </div>
   );

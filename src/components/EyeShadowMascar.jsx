@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Blusher.css';
+import './EyeShadowMascar.css';
 
-function EyeShadowMascar({ onNext, onBack }) {
+function EyeShadowMascar() {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -20,25 +20,25 @@ function EyeShadowMascar({ onNext, onBack }) {
   };
 
   return (
-    <div className="eyeshadow">
-      <h2 onClick={toggleCollapse} className="section-header">
-      EyeShadow&Mascara
-        <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
-      </h2>
+    <div className="form-section">
+      <div className="formz-section">
+        <h2 onClick={toggleCollapse} className="section-header">
+          EyeShadow & Mascara
+          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
+        </h2>
+      </div>
       {!isCollapsed && (
-        <>
-          <div className="tones-grid">
-            {tones.map(tone => (
-              <img
-                key={tone.id}
-                src={tone.src}
-                alt={tone.alt}
-                className={selectedTone === tone.id ? 'selected' : ''}
-                onClick={() => handleSelect(tone.id)}
-              />
-            ))}
-          </div>
-        </>
+        <div className="tones-grid">
+          {tones.map((tone) => (
+            <img
+              key={tone.id}
+              src={tone.src}
+              alt={tone.alt}
+              className={selectedTone === tone.id ? 'selected' : ''}
+              onClick={() => handleSelect(tone.id)}
+            />
+          ))}
+        </div>
       )}
     </div>
   );

@@ -20,14 +20,16 @@ function LipGloss() {
   };
 
   return (
-    <div className="lipgloss">
-      <h2 onClick={toggleCollapse} className="section-header">
-        Lip Gloss
-        <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
-      </h2>
+    <div className="form-section">
+      <div className="formz-section">
+        <h2 onClick={toggleCollapse} className="section-header">
+          Lip Gloss
+          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
+        </h2>
+      </div>
       {!isCollapsed && (
         <div className="tones-grid">
-          {tones.map(tone => (
+          {tones.map((tone) => (
             <img
               key={tone.id}
               src={tone.src}
