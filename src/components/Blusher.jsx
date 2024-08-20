@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Blusher.css';
 
-function Blusher({ onNext, onBack }) {
+function Blusher() {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -19,11 +19,13 @@ function Blusher({ onNext, onBack }) {
   };
 
   return (
-    <div className="blusher">
-      <h2 onClick={toggleCollapse} className="section-header">
-        Blusher 
-        <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
-      </h2>
+    <div className="form-section">
+      <div className="formz-section">
+        <h2 onClick={toggleCollapse} className="section-header">
+          Blusher 
+          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
+        </h2>
+      </div>
       {!isCollapsed && (
         <>
           <div className="tones-grid">
