@@ -13,7 +13,9 @@
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  height: 2rem;
+  width: 30rem;
+
 }
 
 .section-header {
@@ -25,10 +27,7 @@
 }
 
 .toggle-button {
-  background: none;
-  border: none;
-  font-size: 1.5em;
-  transition: transform 0.3s ease;
+margin-left: 10rem;
 }
 
 .toggle-button.rotate {
