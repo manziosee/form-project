@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './TruffleDustPressPowder.css';
 
-function TruffleDustPressPowder() {
+function TruffleDustPressPowder({ onSelectTone }) {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -15,6 +15,7 @@ function TruffleDustPressPowder() {
 
   const handleSelect = (id) => {
     setSelectedTone(id);
+    onSelectTone(id); // Send the selected tone ID to the parent component
   };
 
   const toggleCollapse = () => {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './LiquidLipstick.css';
 
-function LiquidLipstick() {
+function LiquidLipstick({ onSelectTone }) {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -15,6 +15,7 @@ function LiquidLipstick() {
 
   const handleSelect = (id) => {
     setSelectedTone(id);
+    onSelectTone(id);
   };
 
   const toggleCollapse = () => {

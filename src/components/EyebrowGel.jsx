@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './EyebrowGel.css';
 
-function EyebrowGel() {
+function EyebrowGel({ onSelectTone }) {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -12,6 +12,7 @@ function EyebrowGel() {
 
   const handleSelect = (id) => {
     setSelectedTone(id);
+    onSelectTone(id);  // Send the selected tone ID to the backend or parent component
   };
 
   const toggleCollapse = () => {

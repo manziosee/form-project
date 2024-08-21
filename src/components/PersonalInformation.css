@@ -26,12 +26,20 @@
   font-size: large;
 }
 
-.toggle-button {
-margin-left: 10rem;
+.collapse-icon {
+  margin-left: 10px;
+  transition: transform 0.3s ease;
 }
 
-.toggle-button.rotate {
-  transform: rotate(180deg);
+.dropdown {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.collapse-icon.collapsed {
+  transform: rotate(180deg); /* Rotate when collapsed */
+  transition: transform 0.3s ease;
 }
 
 .form-content {

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import dropdown from '../assets/dropdown.svg';
 import './Blusher.css';
 
-function Blusher() {
+function Blusher({ onSelectTone }) {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -12,6 +13,7 @@ function Blusher() {
 
   const handleSelect = (id) => {
     setSelectedTone(id);
+    onSelectTone(id);  // Send the selected tone ID to the backend or parent component
   };
 
   const toggleCollapse = () => {
@@ -23,7 +25,9 @@ function Blusher() {
       <div className="formz-section">
         <h2 onClick={toggleCollapse} className="section-header">
           Blusher 
-          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
+          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>
+          <img className="dropdown" src={dropdown} alt="Toggle" />
+ </span>
         </h2>
       </div>
       {!isCollapsed && (

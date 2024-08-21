@@ -38,6 +38,11 @@ function App() {
     }
   };
 
+  const handleSelectTone = (id) => {
+    console.log(`Selected tone ID: ${id}`);
+    // You can send this ID to the backend or use it as needed
+  };
+
   return (
     <div className="app">
       <div className="background" style={{ backgroundImage: `url(${background})` }}></div>
@@ -50,33 +55,33 @@ function App() {
               <BookingDetails />
             </>
           )}
-          {step === 2 && <SkinTonePicker onNext={handleNext} onBack={handleBack} />}
-          {step === 3 && <MakeUpStyle onNext={handleNext} onBack={handleBack} />}
+          {step === 2 && <SkinTonePicker onSelectTone={handleSelectTone} onNext={handleNext} onBack={handleBack} />}
+          {step === 3 && <MakeUpStyle onSelectTone={handleSelectTone} onNext={handleNext} onBack={handleBack} />}
           {step === 4 && (
             <>
-              <Foundation />
-              <TruffleDustPressPowder />
-              <DuskdelightSettingPowder />
-              <SculptingConcealer />
-              <SculptBronzer />
-              <GlowBeamHighlighter />
-              <Blusher />
+              <Foundation onSelectTone={handleSelectTone} />
+              <TruffleDustPressPowder onSelectTone={handleSelectTone} />
+              <DuskdelightSettingPowder onSelectTone={handleSelectTone} />
+              <SculptingConcealer onSelectTone={handleSelectTone} />
+              <SculptBronzer onSelectTone={handleSelectTone} />
+              <GlowBeamHighlighter onSelectTone={handleSelectTone} />
+              <Blusher onSelectTone={handleSelectTone} />
             </>
           )}
           {step === 5 && (
             <>
-              <EyebrowGel />
-              <EyeShadowMascar />
-              <GelLiner />
+              <EyebrowGel onSelectTone={handleSelectTone} />
+              <EyeShadowMascar onSelectTone={handleSelectTone} />
+              <GelLiner onSelectTone={handleSelectTone} />
             </>
           )}
           {step === 6 && (
             <>
-              <Lipstick />
-              <LiquidLipstick />
-              <LipGloss />
-              <LipLiner />
-              <SilhouetteLiner />
+              <Lipstick onSelectTone={handleSelectTone} />
+              <LiquidLipstick onSelectTone={handleSelectTone} />
+              <LipGloss onSelectTone={handleSelectTone} />
+              <LipLiner onSelectTone={handleSelectTone} />
+              <SilhouetteLiner onSelectTone={handleSelectTone} />
             </>
           )}
           {step === 7 && <FeedbackPage onBack={handleBack} />}

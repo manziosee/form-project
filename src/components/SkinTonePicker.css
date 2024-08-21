@@ -31,10 +31,16 @@
   transition: transform 0.3s ease;
 }
 
-.collapse-icon.collapsed {
-  transform: rotate(-180deg);
+.dropdown {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
+.collapse-icon.collapsed {
+  transform: rotate(180deg); /* Rotate when collapsed */
+  transition: transform 0.3s ease;
+}
 .tones-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

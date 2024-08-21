@@ -4,7 +4,7 @@ import dropdown from '../assets/dropdown.svg';
 
 function BookingDetails() {
   const [details, setDetails] = useState({
-    date: '',
+    date: '', 
     time: ''
   });
 
@@ -23,9 +23,9 @@ function BookingDetails() {
       <div className='formz-section'>
         <h2 onClick={toggleCollapse} className="section-header">
           Booking Details Section
-          <span className="toggle-button">
-            <img className="dropdown" src={dropdown} alt="Toggle" />
-          </span>
+          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>
+          <img className="dropdown" src={dropdown} alt="Toggle" />
+ </span>
         </h2>
       </div>
 

@@ -28,10 +28,20 @@
   font-weight: 500;
 }
 
-.toggle-button img {
+.collapse-icon {
   margin-left: 10px;
-  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown {
   width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.collapse-icon.collapsed {
+  transform: rotate(180deg); /* Rotate when collapsed */
+  transition: transform 0.3s ease;
 }
 
 .form-content {

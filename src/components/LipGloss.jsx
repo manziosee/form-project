@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './LipGloss.css';
 
-function LipGloss() {
+function LipGloss({ onSelectTone }) {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -13,6 +13,7 @@ function LipGloss() {
 
   const handleSelect = (id) => {
     setSelectedTone(id);
+    onSelectTone(id);
   };
 
   const toggleCollapse = () => {
