@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './EyeShadowMascar.css';
 
-function EyeShadowMascar() {
+function EyeShadowMascar({ onSelectTone }) {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -13,6 +13,7 @@ function EyeShadowMascar() {
 
   const handleSelect = (id) => {
     setSelectedTone(id);
+    onSelectTone(id);  // Send the selected tone ID to the backend or parent component
   };
 
   const toggleCollapse = () => {

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import dropdown from '../assets/dropdown.svg'; // Importing the dropdown icon
 import './SkinTonePicker.css';
 
-function SkinTonePicker({ onNext, onBack }) {
+function SkinTonePicker({ onNext, onBack, onSelectTone }) {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [showUpload, setShowUpload] = useState(false);
@@ -15,6 +16,7 @@ function SkinTonePicker({ onNext, onBack }) {
 
   const handleSelect = (id) => {
     setSelectedTone(id);
+    onSelectTone(id);
   };
 
   const toggleCollapse = () => {
@@ -30,7 +32,9 @@ function SkinTonePicker({ onNext, onBack }) {
       <div className="formz-section">
         <h2 onClick={toggleCollapse} className="section-header">
           Pick your skin tone
-          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
+          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>
+            <img className="dropdown" src={dropdown} alt="Toggle" />
+          </span>
         </h2>
       </div>
       {!isCollapsed && (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SilhouetteLiner.css';
 
-function SilhouetteLiner() {
+function SilhouetteLiner({ onSelectTone }) {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -13,6 +13,7 @@ function SilhouetteLiner() {
 
   const handleSelect = (id) => {
     setSelectedTone(id);
+    onSelectTone(id); // Send the selected tone ID to the parent component
   };
 
   const toggleCollapse = () => {

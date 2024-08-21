@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Foundation.css';
 
-function Foundation() {
+function Foundation({ onSelectTone }) {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -14,6 +14,7 @@ function Foundation() {
 
   const handleSelect = (id) => {
     setSelectedTone(id);
+    onSelectTone(id);  // Send the selected tone ID to the backend or parent component
   };
 
   const toggleCollapse = () => {

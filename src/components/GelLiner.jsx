@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './GelLiner.css';
 
-function GetLiner() {
+function GetLiner({ onSelectTone }) {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -15,6 +15,7 @@ function GetLiner() {
 
   const handleSelect = (id) => {
     setSelectedTone(id);
+    onSelectTone(id);  // Send the selected tone ID to the backend or parent component
   };
 
   const toggleCollapse = () => {

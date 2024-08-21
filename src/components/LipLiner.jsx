@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './LipLiner.css';
 
-function LipLiner() {
+function LipLiner({ onSelectTone }) {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -13,6 +13,7 @@ function LipLiner() {
 
   const handleSelect = (id) => {
     setSelectedTone(id);
+    onSelectTone(id);
   };
 
   const toggleCollapse = () => {

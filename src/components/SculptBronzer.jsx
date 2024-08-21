@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SculptBronzer.css';
 
-function SculptBronzer() {
+function SculptBronzer({ onSelectTone }) {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -12,6 +12,7 @@ function SculptBronzer() {
 
   const handleSelect = (id) => {
     setSelectedTone(id);
+    onSelectTone(id); // Send the selected tone ID to the parent component
   };
 
   const toggleCollapse = () => {

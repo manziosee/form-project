@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import dropdown from '../assets/dropdown.svg';
 import './DuskdelightSettingPowder.css';
 
-function DuskdelightSettingPowder() {
+function DuskdelightSettingPowder({ onSelectTone }) {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -16,6 +17,7 @@ function DuskdelightSettingPowder() {
 
   const handleSelect = (id) => {
     setSelectedTone(id);
+    onSelectTone(id);
   };
 
   const toggleCollapse = () => {
@@ -27,7 +29,10 @@ function DuskdelightSettingPowder() {
       <div className="formz-section">
         <h2 onClick={toggleCollapse} className="section-header">
           Dusk Delight Setting Powder
-          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
+          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>
+          <img className="dropdown" src={dropdown} alt="Toggle" />
+ </span>
+
         </h2>
       </div>
       {!isCollapsed && (

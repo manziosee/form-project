@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SculptingConcealer.css';
 
-function SculptingConcealer() {
+function SculptingConcealer({ onSelectTone }) {
   const [selectedTone, setSelectedTone] = useState(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -15,6 +15,7 @@ function SculptingConcealer() {
 
   const handleSelect = (id) => {
     setSelectedTone(id);
+    onSelectTone(id); // Send the selected tone ID to the parent component
   };
 
   const toggleCollapse = () => {
