@@ -86,18 +86,21 @@ function App() {
           )}
           {step === 7 && <FeedbackPage onBack={handleBack} />}
 
-          <div className="navigation-buttons">
-            {step > 1 && (
-              <button onClick={handleBack} className="back-button">
-                Back
-              </button>
-            )}
-            {step < 7 && (
-              <button onClick={handleNext} className="next-button">
-                Next
-              </button>
-            )}
-          </div>
+          {/* Only render the navigation buttons up to step 6 */}
+          {step < 7 && (
+            <div className="navigation-buttons">
+              {step > 1 && (
+                <button onClick={handleBack} className="back-button">
+                  Back
+                </button>
+              )}
+              {step < 7 && (
+                <button onClick={handleNext} className="next-button">
+                  Next
+                </button>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>

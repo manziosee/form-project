@@ -1,7 +1,7 @@
 import React from 'react';
 import './FeedbackPage.css';
 
-function FeedbackPage() {
+function FeedbackPage({ onBack }) {  // Add onBack prop
   return (
     <div className="feedback-page">
       <div className="feedback-content">
@@ -25,7 +25,7 @@ function FeedbackPage() {
         </p>
         <p className="closing-text">We can't wait to make you fabulous! 💄❤️</p>
         <div className="button-group">
-          <button type="button" className="btn back-btn">Back</button>
+          <button type="button" className="btn back-btn" onClick={onBack}>Back</button>
           <button type="submit" className="btn submit-btn">Submit</button>
         </div>
       </div>

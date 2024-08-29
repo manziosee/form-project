@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import dropdown from '../assets/dropdown.svg';
 import './EyebrowGel.css';
 
 function EyebrowGel({ onSelectTone }) {
@@ -24,7 +25,9 @@ function EyebrowGel({ onSelectTone }) {
       <div className="formz-section">
         <h2 onClick={toggleCollapse} className="section-header">
           Eyebrow Gel
-          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
+          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>
+          <img className="dropdown" src={dropdown} alt="Toggle" />
+ </span>
         </h2>
       </div>
       {!isCollapsed && (
