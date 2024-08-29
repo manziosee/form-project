@@ -8,14 +8,13 @@
 .formz-section {
   background-color: rgba(223, 233, 235, 0.795);
   padding: 1rem;
-  height: 25px;
-  font-family: Cambria;
+  font-family: 'YourDesiredFontFamily', Cambria, sans-serif;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
-  height: 2rem;
+  align-items: center;
+  height: 3rem;
   width: 30rem;
-
 }
 
 .section-header {
@@ -23,11 +22,12 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  font-size: large;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .collapse-icon {
-  margin-left: 10px;
+  margin-left: 10px; /* Adjusts space between the text and the dropdown icon */
   transition: transform 0.3s ease;
 }
 

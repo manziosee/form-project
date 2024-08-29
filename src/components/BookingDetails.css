@@ -38,6 +38,95 @@
   transform: rotate(180deg); /* Rotate when collapsed */
   transition: transform 0.3s ease;
 }
+/* PersonalInformation.css and BookingDetails.css */
+
+.form-section {
+  margin: 20px;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: white;
+}
+
+.formz-section {
+  background-color: rgba(223, 233, 235, 0.795);
+  padding: 1rem;
+  font-family: 'YourDesiredFontFamily', Cambria, sans-serif;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  width: 30rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.collapse-icon {
+  margin-left: 10px; /* Adjusts space between the text and the dropdown icon */
+  transition: transform 0.3s ease;
+}
+
+.dropdown {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.collapse-icon.collapsed {
+  transform: rotate(180deg); /* Rotate when collapsed */
+  transition: transform 0.3s ease;
+}
+
+.form-content {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+small {
+  display: block;
+  color: grey;
+}
+
+@media (max-width: 600px) {
+  .form-section {
+    padding: 10px;
+  }
+
+  .formz-section {
+    padding: 0.5rem;
+  }
+
+  .form-content {
+    margin-top: 10px;
+  }
+
+  input {
+    padding: 6px;
+  }
+}
 
 .form-content {
   margin-top: 20px;

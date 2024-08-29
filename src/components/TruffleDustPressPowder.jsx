@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import dropdown from '../assets/dropdown.svg';
 import './TruffleDustPressPowder.css';
 
 function TruffleDustPressPowder({ onSelectTone }) {
@@ -27,7 +28,9 @@ function TruffleDustPressPowder({ onSelectTone }) {
       <div className="formz-section">
         <h2 onClick={toggleCollapse} className="section-header">
           Truffle Dust Press Powder
-          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
+          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>
+          <img className="dropdown" src={dropdown} alt="Toggle" />
+ </span>
         </h2>
       </div>
       {!isCollapsed && (

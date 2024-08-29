@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Lipstick.css';
+import dropdown from '../assets/dropdown.svg';
 
 function Lipstick({ onSelectTone }) {
   const [selectedTone, setSelectedTone] = useState(null);
@@ -25,7 +26,9 @@ function Lipstick({ onSelectTone }) {
       <div className="formz-section">
         <h2 onClick={toggleCollapse} className="section-header">
           Lipstick
-          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
+          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>
+          <img className="dropdown" src={dropdown} alt="Toggle" />
+ </span>
         </h2>
       </div>
       {!isCollapsed && (

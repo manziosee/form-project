@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import dropdown from '../assets/dropdown.svg';
 import './SilhouetteLiner.css';
 
 function SilhouetteLiner({ onSelectTone }) {
@@ -25,7 +26,10 @@ function SilhouetteLiner({ onSelectTone }) {
       <div className="formz-section">
         <h2 onClick={toggleCollapse} className="section-header">
           Silhouette Liner
-          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>▼</span>
+          <span className={`collapse-icon ${isCollapsed ? 'collapsed' : ''}`}>
+          <img className="dropdown" src={dropdown} alt="Toggle" />
+ </span>
+
         </h2>
       </div>
       {!isCollapsed && (
